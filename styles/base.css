@@ -1,0 +1,104 @@
+:root {
+  /* Color Palette */
+  --light-teal: #99d5c9;
+  --dusty-blue: #6c969d;
+  --purplish-blue: #645e9d;
+  --dark-purple: #392b58;
+  --very-dark-purple: #2d0320;
+
+  /* Other variables */
+  --img-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header,
+main {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--dark-purple);
+}
+
+nav {
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: var(--light-teal);
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--purplish-blue);
+  color: white;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  color: var(--dark-purple);
+  border-bottom: 3px solid var(--dark-purple);
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: 1px solid var(--dusty-blue);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  overflow: hidden; /* To contain the floated image */
+}
+
+.card h2 {
+  color: var(--purplish-blue);
+  margin-bottom: 1rem;
+}
+
+.card img {
+  width: 150px;
+  height: auto;
+  border: 1px solid var(--dusty-blue);
+  padding: 5px;
+  box-shadow: var(--img-box-shadow);
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.card p {
+  line-height: 1.6;
+  color: var(--very-dark-purple);
+}
+
+footer {
+  max-width: 840px;
+  margin: 1rem auto 0;
+  padding: 1rem;
+  border-top: 1px solid var(--dusty-blue);
+  text-align: center;
+  color: var(--dark-purple);
+}
