@@ -6,13 +6,19 @@
     <title>WDD 131</title>
     <meta
       name="description"
-      content="This page is an introduction to Alex Bridge for WDD 131 - Dynamic Web Fundamentals"
+      content="This page introduces Alex Bridge for WDD 131 - Dynamic Web Fundamentals, covering personal background, web development resources, and course assignments."
     />
     <link rel="stylesheet" href="styles/base.css" />
     <meta name="author" content="Alex Bridge" />
+    <script src="scripts/getdates.js" defer></script>
   </head>
   <body>
     <header>
+      <section>
+        <span class="page-title" id="course-title">
+          <a href="#">WDD 131 - Dynamic Web Fundamentals</a>
+        </span>
+      </section>
       <nav>
         <a href="#">Home</a>
         <a href="https://www.linkedin.com/in/alexbridge1/">LinkedIn</a>
@@ -25,27 +31,45 @@
     </header>
     <main>
       <h1>Alex Bridge</h1>
-      <section class="card">
-        <h2>Heading</h2>
-        <img src="images/profile.jpg" alt="Image of Alex Bridge" />
-        <p>
-          After a fulfilling seven-year career in the fast-paced world of
-          mortgage capital markets, I've embarked on a new professional and
-          educational adventure, pivoting to my passion in tech. This transition
-          has been an exciting journey of growth and learning. On a personal
-          note, though I've been looking for work for a little while now, my
-          life is wonderfully busy with my two-year-old daughter, who keeps me
-          on my toes, and I'm looking forward to celebrating my sixth wedding
-          anniversary with my wife this year. It's a life full of exciting
-          changes, both professionally and personally, and I wouldn't have it
-          any other way.
-        </p>
-      </section>
-      <section class="card">
-        <h2>Heading 2</h2>
-        <img src="images/second.jpg" alt="An image of a temple?" srcset="" />
-        <p>Content description of image haven't decided yet.</p>
-      </section>
+      <div class="grid">
+        <section class="card">
+          <h2>About Me</h2>
+          <img src="images/profile.jpg" alt="Image of Alex Bridge" />
+          <p>
+            After a fulfilling seven-year career in the fast-paced world of
+            mortgage capital markets, I've embarked on a new professional and
+            educational adventure, pivoting to my passion in tech. This
+            transition has been an exciting journey of growth and learning. On a
+            personal note, though I've been looking for work for a little while
+            now, my life is wonderfully busy with my two year-old daughter, who
+            keeps me on my toes, and I'm looking forward to celebrating my sixth
+            wedding anniversary with my wife this year. It's a life full of
+            exciting changes, both professionally and personally, and I wouldn't
+            have it any other way.
+          </p>
+        </section>
+        <section class="card-2">
+          <h2>Web Dev Resources</h2>
+          <ul>
+            <li>
+              <a href="boot.dev">Boot.Dev</a>
+            </li>
+            <li>
+              <a href="https://coolors.co/">Coolors.co</a>
+            </li>
+            <li>
+              <a href="https://excalidraw.com/">Excalidraw.com</a>
+            </li>
+            <li>
+              <a href="https://devhints.io/">DevHints.io</a>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
+    <footer>
+      <p>&copy;<span id="currentyear"></span> Alex Bridge, USA</p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
