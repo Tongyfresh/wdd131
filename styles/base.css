@@ -92,8 +92,7 @@ footer {
 }
 
 /* General card styling */
-.card,
-.card-2 {
+.card {
   border: 1px solid var(--dusty-blue);
   border-radius: 8px;
   margin-bottom: 1.5rem;
@@ -101,13 +100,14 @@ footer {
   background-color: #f9f9f9;
   overflow: hidden;
 }
-.card-2 {
+
+/* Modifier class for cards containing button lists */
+.buttons {
   display: flex;
   flex-direction: column;
 }
 
-.card h2,
-.card-2 h2 {
+.card h2 {
   color: var(--purplish-blue);
   margin-bottom: 1rem;
 }
@@ -130,8 +130,8 @@ footer {
   color: var(--very-dark-purple);
 }
 
-/* Card-2 styling for the list items/buttons */
-.card-2 ul {
+/* Styling for the list inside a .buttons card */
+.buttons ul {
   list-style-type: none;
   flex-grow: 1;
   display: flex;
@@ -139,7 +139,7 @@ footer {
   justify-content: space-around;
 }
 
-.card-2 ul a {
+.buttons ul a {
   display: block;
   text-decoration: none;
   padding: 0.75rem;
@@ -150,7 +150,7 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-.card-2 ul a:hover {
+.buttons ul a:hover {
   background-color: var(--light-teal);
   color: var(--purplish-blue);
 }
