@@ -37,6 +37,7 @@ body {
 header {
   background-color: var(--dark-purple);
   max-width: 100%;
+  color: white;
 }
 
 nav {
