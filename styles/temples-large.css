@@ -1,0 +1,20 @@
+@media (min-width: 640px) {
+    /* Hide hamburger menu on larger screens */
+    #menu {
+        display: none;
+    }
+
+    /* Display navigation horizontally */
+    nav {
+        display: block;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
