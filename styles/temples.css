@@ -1,5 +1,6 @@
 :root {
     --color-primary: #CB4663;      /* Red/Pink */
+    --color-darker-primary: #3b0713;      /* darker contrast Red/Pink */
     --color-secondary: #7F96FF;    /* Light Blue/Purple */
     --color-light-bg: #DBFCFF;     /* Very Light Cyan */
     --color-light-blue: #A6CFD5;   /* Light Teal/Blue */
@@ -15,7 +16,7 @@
 body {
     font-family: 'Merriweather', serif;
     background-color: var(--color-light-bg);
-    color: var(--color-primary);
+    color: var(--color-darker-primary);
 }
 
 header, main, footer {
