@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information: Iceland</title>
+    <meta name="description" content="A summary page about Iceland, including geographical data and current weather information.">
+    <meta name="author" content="Alex Bridge">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card-container">
+        <header class="header">
+            <h1>Iceland</h1>
+        </header>
+
+        <div class="hero-image-wrapper">
+            <picture>
+                <source srcset="images/place_hero-large.webp" media="(min-width: 800px)">
+                <source srcset="images/place_hero-small.webp" media="(min-width: 400px)">
+                <img class="hero-image" src="images/place_hero.webp" alt="The stunning landscape of Iceland" width="400" height="250">
+            </picture>
+        </div>
+
+        <div class="separator-green"></div>
+
+        <main>
+            <section class="content-section data-section">
+                <h2 class="section-title">Data</h2>
+                <ul class="info-list">
+                    <li class="info-item"><span class="info-label">Area:</span> 103,000 km²</li>
+                    <li class="info-item"><span class="info-label">Population:</span> 372,520</li>
+                    <li class="info-item"><span class="info-label">Capital:</span> Reykjavik</li>
+                    <li class="info-item"><span class="info-label">Language:</span> Icelandic</li>
+                    <li class="info-item"><span class="info-label">Currency:</span> Icelandic Króna</li>
+                    <li class="info-item"><span class="info-label">Time Zone:</span> GMT (UTC+0)</li>
+                </ul>
+            </section>
+
+            <div class="separator-green"></div>
+
+            <section class="content-section weather-section">
+                <h2 class="section-title">Weather</h2>
+                <img src="images/weather-svgrepo-com.svg" alt="Weather icon" class="weather-icon" width="48" height="48">
+                <ul class="info-list">
+                    <li class="info-item"><span class="info-label">Temperature:</span> <span id="temperature">5</span> °C</li>
+                    <li class="info-item"><span class="info-label">Conditions:</span> Cloudy</li>
+                    <li class="info-item"><span class="info-label">Wind:</span> <span id="wind-speed">10</span> km/h</li>
+                    <li class="info-item"><span class="info-label">Wind Chill:</span> <span id="wind-chill"></span></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy;<span id="currentyear"></span> Alex Bridge | USA</p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
+    <script src="week02/scripts/place.js" defer></script>
+</body>
+</html>
