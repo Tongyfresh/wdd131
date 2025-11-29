@@ -1,0 +1,128 @@
+:root {
+    --color-primary: #CB4663;      /* Red/Pink */
+    --color-darker-primary: #3b0713;      /* darker contrast Red/Pink */
+    --color-secondary: #7F96FF;    /* Light Blue/Purple */
+    --color-light-bg: #DBFCFF;     /* Very Light Cyan */
+    --color-light-blue: #A6CFD5;   /* Light Teal/Blue */
+    --color-white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: var(--color-light-bg);
+    color: var(--color-darker-primary);
+}
+
+header, main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+    color: var(--color-white);
+}
+
+nav {
+    display: none; 
+    flex-direction: column;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav.open {
+    display: flex; 
+}
+
+nav a {
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+nav a:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+main {
+    padding: 1rem;
+}
+
+main h2 {
+    font-family: 'Merriweather', serif;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-blue);
+    border-radius: 4px;
+    overflow: hidden; 
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    text-align: center;
+    padding: 0.75rem;
+    font-family: 'Merriweather', serif;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
