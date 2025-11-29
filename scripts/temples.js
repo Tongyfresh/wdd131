@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add event listeners to navigation links for filtering
     document.querySelector('nav').addEventListener('click', (event) => {
-        // Check if a link was clicked
         if (event.target.tagName === 'A') {
             const filter = event.target.textContent;
             filterTemples(filter);
@@ -160,4 +159,5 @@ function displayTemples(templeList) {
             container.appendChild(card);
 
     })
+
 };
