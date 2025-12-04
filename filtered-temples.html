@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="A responsive temple album gallery page for WDD 131.">
+    <meta name="author" content="Alex Bridge">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap">
+    <script src="scripts/temples.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Toggle navigation menu"></button>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery" id="temple-card-container">
+            <figure>
+                <img src="images/aba-nigeria.jpg" alt="Aba Nigeria Temple" loading="lazy">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/anchorage-alaska.jpg" alt="Anchorage Alaska Temple" loading="lazy">
+                <figcaption>Anchorage Alaska Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/arequipa-peru.jpeg" alt="Arequipa Peru Temple" loading="lazy">
+                <figcaption>Arequipa Peru Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/atlanta-georgia.jpg" alt="Atlanta Georgia Temple" loading="lazy">
+                <figcaption>Atlanta Georgia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bern-switzerland.jpg" alt="Bern Switzerland Temple" loading="lazy">
+                <figcaption>Bern Switzerland Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/boise-idaho.jpg" alt="Boise Idaho Temple" loading="lazy">
+                <figcaption>Boise Idaho Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bountiful-utah.jpg" alt="Bountiful Utah Temple" loading="lazy">
+                <figcaption>Bountiful Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/brigham-city-utah.jpg" alt="Brigham City Utah Temple" loading="lazy">
+                <figcaption>Brigham City Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/buenos-aires-argentina.jpg" alt="Buenos Aires Argentina Temple" loading="lazy">
+                <figcaption>Buenos Aires Argentina Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/cardston-alberta.jpg" alt="Cardston Alberta Temple" loading="lazy">
+                <figcaption>Cardston Alberta Temple</figcaption>
+            </figure>
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Alex Bridge | USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
