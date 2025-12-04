@@ -1,0 +1,98 @@
+/* Define the color palette and fonts using CSS variables */
+:root {
+    --primary-color: #2A4B3A; /* Deep Green */
+    --secondary-color: #E07A5F; /* Coral/Terracotta */
+    --text-color: #3D405B; /* Dark Blue/Purple */
+    --background-color: #F4F1DE; /* Light Cream */
+
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+/* General body styling */
+body {
+    background-color: var(--background-color);
+    font-family: var(--body-font);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+section {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Color Schema Section Styling */
+.color-schema ul {
+    list-style: none;
+    padding: 0;
+}
+.color-schema li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.color-box {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+.primary-bg { background-color: var(--primary-color); }
+.secondary-bg { background-color: var(--secondary-color); }
+.text-bg { background-color: var(--text-color); }
+.background-bg { background-color: var(--background-color); }
+
+/* Wireframe Section Styling */
+.wireframe-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.wireframe img {
+    max-width: 100%;
+    width: 300px;
+    height: 400px;
+    object-fit: contain; 
+    border: 1px solid #ccc;
+}
+.wireframe h3 {
+    text-align: center;
+    color: var(--text-color);
+}

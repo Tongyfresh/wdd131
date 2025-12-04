@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan | Bonsai Basics</title>
+    <meta name="description" content="The site plan for the Bonsai Basics website project.">
+    <meta name="author" content="Alex Bridge">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Site Plan: Bonsai Basics</h1>
+    </header>
+    <main>
+        <!-- Site Name -->
+        <section>
+            <h2>Site Name: Bonsai Basics</h2>
+            <p>
+                I wanted to do some personal research into the topic of beginner bonsai keeping and was hoping to make it a more approachable topic.
+            </p>
+            <p><strong>Optional domain:</strong> bonsaibeginnings.org</p>
+        </section>
+
+        <!-- Site Purpose -->
+        <section>
+            <h2>Site Purpose</h2>
+            <p>
+                My goal here is to create a friendly space for anyone curious about bonsai but not sure where to start. I'll break down the essentials—like picking a tree, potting it, and keeping it alive—to make the whole process feel less intimidating and give beginners the confidence to get their hands dirty.
+            </p>
+        </section>
+
+        <!-- Scenarios -->
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>"I just received a juniper bonsai as a gift. How do I take care of it so it doesn't die?"</li>
+                <li>"What are the best and most forgiving types of trees for a complete beginner to start with?"</li>
+            </ul>
+        </section>
+
+        <!-- Color Schema -->
+        <section class="color-schema">
+            <h2>Color Schema</h2>
+            <p>I'm going for a natural, calming vibe with the colors, pulling inspiration straight from the garden.</p>
+            <ul>
+                <li>
+                    <div class="color-box primary-bg"></div>
+                    <strong>Primary Green (#2A4B3A):</strong> This will be for my main headings and important accents. It has a nice, strong, earthy feel that reminds me of a healthy plant.
+                </li>
+                <li>
+                    <div class="color-box secondary-bg"></div>
+                    <strong>Accent Coral (#E07A5F):</strong> I'll use this for links and buttons. It's a warm, terracotta-like color that should stand out nicely without being jarring.
+                </li>
+                <li>
+                    <div class="color-box text-bg"></div>
+                    <strong>Dark Text (#3D405B):</strong> For all the main text. It's a dark, soft color that's easy on the eyes for reading.
+                </li>
+                <li>
+                    <div class="color-box background-bg"></div>
+                    <strong>Light Background (#F4F1DE):</strong> This will be the main background. It's a light, creamy color that feels clean and natural.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Typography -->
+        <section>
+            <h2>Typography</h2>
+            <p class="heading-font"><strong>Headings: 'Merriweather', serif</strong></p>
+            <p>I chose Merriweather for headings because it feels classic and established, but is still really easy to read.</p>
+            <p class="body-font"><strong>Body Text: 'Lato', sans-serif</strong></p>
+            <p>For all the main text, I'm using Lato. It's a clean, friendly font that's great for reading longer articles without straining your eyes.</p>
+        </section>
+
+        <!-- Wireframes -->
+        <section class="wireframes">
+            <h2>Wireframes</h2>
+            <p>Here are some rough sketches for how I picture the home page looking on a phone versus a desktop computer.</p>
+            <div class="wireframe-container">
+                <div class="wireframe">
+                    <h3>Mobile View</h3>
+                    <img src="images/mobile1.jpg" alt="Mobile wireframe sketch">
+                </div>
+                <div class="wireframe">
+                    <h3>Desktop View</h3>
+                    <img src="images/site1.jpg" alt="Desktop wireframe sketch">
+                    <img src="images/site2.jpg" alt="Desktop wireframe sketch">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Alex Bridge | WDD 131</p>
+    </footer>
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
