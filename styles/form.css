@@ -1,0 +1,155 @@
+:root {
+    --primary-green: #2A4B3A;
+    --accent-coral: #E07A5F;
+    --dark-text: #3D405B;
+    --light-background: #F4F1DE;
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--light-background);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: var(--primary-green);
+    color: var(--light-background);
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    width: 90%;
+}
+
+form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+legend {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--primary-green);
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.required {
+    color: var(--accent-coral);
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+    background-color: var(--accent-coral);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: var(--heading-font);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #d16a4f;
+}
+
+/* Checkbox Styling */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Star rating styling */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    margin: 0 0.1rem;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input[type="radio"]:checked ~ label {
+    color: var(--accent-coral);
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+}
+
+/* Review Page stuff*/
+main h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+main p {
+    text-align: center;
+    font-size: 1.2rem;
+}
