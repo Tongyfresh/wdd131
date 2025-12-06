@@ -26,11 +26,14 @@ const products = [
     }
 ];
 
-const productSelect = document.getElementById('productName');
-
-products.forEach(product => {
-    const option = document.createElement('option');
-    option.value = product.id;
-    option.textContent = product.name.charAt(0).toUpperCase() + product.name.slice(1);
-    productSelect.appendChild(option);
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    
+    const productSelect = document.getElementById('productName');
+    products.forEach(product => {
+        const option = document.createElement('option');
+        option.value = product.id;
+        option.textContent = product.name.charAt(0).toUpperCase() + product.name.slice(1);
+        productSelect.appendChild(option);
+    });
 });

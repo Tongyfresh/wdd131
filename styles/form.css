@@ -153,3 +153,15 @@ main p {
     text-align: center;
     font-size: 1.2rem;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    main {
+        margin: 1rem auto;
+        width: 95%;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+}
