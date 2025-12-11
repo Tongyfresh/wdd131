@@ -44,19 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const galleryGrid = document.getElementById('gallery-grid');
         
         if (galleryGrid) {
-            galleryGrid.innerHTML = '';
 
-            beginnerTrees.forEach(tree => {
-                const cardHTML = `
+            const allCardsHTML = beginnerTrees.map(tree => `
                     <div class="tree-card">
                         <h3>${tree.name}</h3>
                         <p class="scientific"><em>${tree.scientificName}</em></p>
                         <img src="${tree.imageUrl}" alt="A ${tree.name} bonsai tree" loading="lazy">
                         <p>${tree.description}</p>
                     </div>
-                `;
-                galleryGrid.innerHTML += cardHTML;
-            });
+                `).join('');
+
+            galleryGrid.innerHTML = allCardsHTML;
         }
     }
 
