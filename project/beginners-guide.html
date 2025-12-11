@@ -17,22 +17,25 @@
 <body>
     <header>
         <div class="logo">Bonsai Basics</div>
-        <nav>
+        <a id="menu" href="#">&#9776;</a>
+        <nav class="navigation">
             <a href="index.html">Home</a>
             <a href="beginners-guide.html">Beginner's Guide</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1>Best Bonsai for Beginners</h1>
-            <p>Starting with the right tree can make all the difference. Here are some forgiving choices for new enthusiasts.</p>
-        </section>
+<main>
+    <section class="hero">
+        <h1>Best Bonsai for Beginners</h1>
+        <img src="images/beginners-hero.webp" alt="A collection of starter bonsai trees">
+        <p>Starting with the right tree can make all the difference. Here are some forgiving choices for new enthusiasts.</p>
+    </section>
 
-        <section id="tree-gallery">
-            <h2>Our Top Picks</h2>
-        </section>
-    </main>
+    <section id="tree-gallery">
+        <h2>Our Top Picks</h2>
+        <div id="gallery-grid" class="gallery-grid"></div>
+    </section>
+</main>
     <footer>
         <p>&copy; <span id="currentyear"></span> | Alex Bridge | WDD 131</p>
     </footer>

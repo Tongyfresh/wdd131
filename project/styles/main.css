@@ -1,103 +1,340 @@
-/* Variables from site plan */
+/* =========================================
+   VARIABLES & RESET
+   ========================================= */
 :root {
     --primary-green: #2A4B3A;
     --accent-coral: #E07A5F;
     --dark-text: #3D405B;
     --light-background: #F4F1DE;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    
     --heading-font: 'Merriweather', serif;
     --body-font: 'Lato', sans-serif;
 }
 
-/* General Body Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   GENERAL LAYOUT 
+   ========================================= */
 body {
     font-family: var(--body-font);
     background-color: var(--light-background);
     color: var(--dark-text);
     margin: 0;
     padding: 0;
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 main {
-    flex: 1;
-    padding: 1rem;
-    max-width: 960px;
-    margin: 0 auto;
+    flex: 1; 
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto;    
+    padding: 2rem 1rem;
 }
 
-/* Headings and Text */
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--heading-font);
     color: var(--primary-green);
+    margin-top: 0;
 }
 
-/* Header and Navigation */
+/* =========================================
+   INTRO SECTION 
+   ========================================= */
+.intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center; 
+    margin-bottom: 4rem; 
+}
+
+.intro-text {
+    padding: 1rem;
+}
+
+.intro img {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-height: 450px; 
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .intro {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================
+   HEADER & NAVIGATION
+   ========================================= */
 header {
     background-color: var(--primary-green);
     color: var(--light-background);
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
+    box-shadow: var(--shadow);
 }
 
 header .logo {
     font-family: var(--heading-font);
     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem; 
 }
 
 header nav a {
     color: var(--light-background);
     text-decoration: none;
-    margin-left: 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 header nav a:hover {
     color: var(--accent-coral);
 }
-
-/* Footer */
-footer {
-    background-color: var(--primary-green);
+#menu {
+    display: none; 
+    font-size: 1.5rem;
+    text-decoration: none;
     color: var(--light-background);
-    text-align: center;
-    padding: 1rem;
 }
 
-/* Tree Gallery (Beginner's Guide) */
-#tree-gallery {
+/* =========================================
+   HERO SECTIONS
+   ========================================= */
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.hero img {
+    margin: 1.5rem auto; 
+    border-radius: 8px;
+    max-height: 400px;   
+    object-fit: cover;   
+    width: 100%;
+}
+
+/* =========================================
+   COMPONENT: TREE CARDS (Grid)
+   ========================================= */
+.gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
 .tree-card {
-    border: 1px solid var(--primary-green);
-    padding: 1rem;
-    background-color: #fff;
+    background-color: var(--white);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.tree-card:hover {
+    transform: translateY(-5px); 
 }
 
 .tree-card img {
-    max-width: 100%;
-    height: auto;
-    /* Lazy loading is handled by the loading="lazy" attribute in JS */
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    height: 200px; 
+    width: 100%;
+    object-fit: cover;
 }
 
-/* Form Styles (Contact Page) */
+.tree-card h3 {
+    margin-bottom: 0.2rem;
+}
+
+.tree-card .scientific {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   COMPONENT: CONTACT FORM
+   ========================================= */
 form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 0 auto; 
+    
     display: grid;
     gap: 1rem;
 }
 
 form label {
     font-weight: bold;
+    color: var(--primary-green);
 }
 
-form input, form select, form textarea, form button {
-    padding: 0.5rem;
-    font-family: var(--body-font);
-    border: 1px solid var(--dark-text);
+form input, 
+form select, 
+form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    width: 100%;
+}
+
+form button {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+form button:hover {
+    background-color: var(--accent-coral);
+}
+
+/* =========================================
+   CALL TO ACTION & BUTTONS
+   ========================================= */
+
+.call-to-action {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--white); 
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow); 
+}
+
+.button {
+    display: inline-block;      
+    background-color: var(--accent-coral);
+    color: var(--white);
+    padding: 1rem 2rem;          
+    text-decoration: none;      
+    font-weight: bold;
+    border-radius: 4px;          
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: var(--primary-green); 
+    transform: translateY(-3px);           
+    color: var(--white);                  
+}
+
+.button:active {
+    transform: translateY(0);              
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: var(--primary-green);
+    color: var(--light-background);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto; 
+}
+
+/* =========================================
+   MOBILE ADJUSTMENTS (Max-width 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto; 
+        align-items: center;
+        position: relative; 
+    }
+
+    #menu {
+        display: block;
+        justify-self: end; 
+        cursor: pointer;
+    }
+
+    .navigation {
+        display: none; 
+        grid-column: 1 / 3; 
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navigation.open {
+        display: flex; 
+    }
+
+    .navigation a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+    }
+
+
+    .button, button {
+        display: block;
+        width: 100%;
+    }
+
+    form {
+        display: flex;       
+        flex-direction: column;
+        width: 100%;       
+        padding: 1rem;       
+    }
+    
+    form input, 
+    form select, 
+    form textarea {
+        width: 100%;
+        max-width: 100%;   
+        margin-bottom: 1rem; 
+    }
 }

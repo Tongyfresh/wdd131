@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* -----------------------------------------------------------
+       Function: updateCopyrightYear
+       Description: Automatically updates the year in the footer.
+       ----------------------------------------------------------- */
     function updateCopyrightYear() {
         const yearSpan = document.getElementById('currentyear');
         if (yearSpan) {
@@ -7,54 +11,63 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Data: Array of beginner bonsai tree objects
+    /* -----------------------------------------------------------
+       Data: Beginner Trees Array
+       Description: Hardcoded data for the gallery.
+       ----------------------------------------------------------- */
     const beginnerTrees = [
         {
             name: 'Ficus Bonsai',
             scientificName: 'Ficus retusa',
             description: 'Very forgiving and great for indoors. Tolerates low light and is resilient to overwatering.',
-            imageUrl: 'https://via.placeholder.com/300x200.png?text=Ficus+Bonsai'
+            imageUrl: 'images/ficus.webp' 
         },
         {
             name: 'Juniper Bonsai',
             scientificName: 'Juniperus procumbens',
             description: 'A classic outdoor bonsai. It needs plenty of sun and is very hardy. Perfect for wiring and shaping.',
-            imageUrl: 'https://via.placeholder.com/300x200.png?text=Juniper+Bonsai'
+            imageUrl: 'images/juniper.webp'
         },
         {
             name: 'Chinese Elm',
             scientificName: 'Ulmus parvifolia',
             description: 'A fast-growing and tough tree. It can be kept indoors or outdoors and responds well to pruning.',
-            imageUrl: 'https://via.placeholder.com/300x200.png?text=Chinese+Elm'
+            imageUrl: 'images/chinese-elm.webp'
         }
     ];
 
-    // Populate the beginner's guide with tree data
+    /* -----------------------------------------------------------
+       Function: displayBeginnerTrees
+       Description: Loops through the array and injects HTML cards.
+       ----------------------------------------------------------- */
     function displayBeginnerTrees() {
-        const gallery = document.getElementById('tree-gallery');
-        // Only run if the gallery element exists on the page
-        if (gallery) {
+        const galleryGrid = document.getElementById('gallery-grid');
+        
+        if (galleryGrid) {
+            galleryGrid.innerHTML = '';
+
             beginnerTrees.forEach(tree => {
-                // dynamically building the HTML string
                 const cardHTML = `
                     <div class="tree-card">
                         <h3>${tree.name}</h3>
-                        <p><em>${tree.scientificName}</em></p>
-                        <img src="${tree.imageUrl}" alt="A ${tree.name} bonsai tree" loading="lazy" width="300" height="200">
+                        <p class="scientific"><em>${tree.scientificName}</em></p>
+                        <img src="${tree.imageUrl}" alt="A ${tree.name} bonsai tree" loading="lazy">
                         <p>${tree.description}</p>
                     </div>
                 `;
-                gallery.innerHTML += cardHTML;
+                galleryGrid.innerHTML += cardHTML;
             });
         }
     }
 
-    // Handle form submission and localStorage
+    /* -----------------------------------------------------------
+       Function: manageInquiries
+       Description: Handles form submission counting (LocalStorage).
+       ----------------------------------------------------------- */
     function manageInquiries() {
         const contactForm = document.getElementById('contact-form');
         const inquiryCountSpan = document.getElementById('inquiry-count');
 
-        // Only run if the form and span exist
         if (contactForm && inquiryCountSpan) {
             let inquiryCount = localStorage.getItem('inquiryCount') || 0;
             inquiryCountSpan.textContent = inquiryCount;
@@ -65,7 +78,32 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+        /* -----------------------------------------------------------
+       Function: mobileMenu
+       Description: Toggles the hamburger menu
+       ----------------------------------------------------------- */
 
+    function mobileMenu() {
+        const hamburger = document.getElementById('menu');
+        const nav = document.querySelector('.navigation');
+
+        if (hamburger && nav) {
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('open');
+                
+                hamburger.classList.toggle('open');
+                
+                if (hamburger.classList.contains('open')) {
+                    hamburger.innerHTML = '&times;'; 
+                } else {
+                    hamburger.innerHTML = '&#9776;'; 
+                }
+            });
+        }
+    }
+
+
+    mobileMenu();
     updateCopyrightYear();
     displayBeginnerTrees();
     manageInquiries();
